@@ -1,0 +1,42 @@
+{
+  "name": "iteller-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:login": "playwright test --project=login",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "codegen": "playwright codegen http://localhost:8010/lock_screen.html",
+    "report": "playwright show-report",
+    "test:neft": "playwright test tests/neft-outward --headed",
+    "test:neft:cr-approve": "playwright test tests/neft-outward/neft-outward-cr-approve --headed",
+    "test:neft:cr-disapprove": "playwright test tests/neft-outward/neft-outward-cr-disapprove --headed",
+    "test:neft:dr-approve": "playwright test tests/neft-outward/neft-outward-dr-approve --headed",
+    "test:neft:dr-disapprove": "playwright test tests/neft-outward/neft-outward-dr-disapprove --headed",
+    "test:neft:transmit": "playwright test tests/neft-outward/neft-outward-transmit --headed",
+    "test:neft-inward": "playwright test tests/neft-inward --headed",
+    "test:neft-inward:posting": "playwright test tests/neft-inward/neft-inward-posting --headed",
+    "test:neft-inward:return": "playwright test tests/neft-inward/neft-inward-return --headed",
+    "test:cheque-inward": "playwright test tests/cheque-inward --headed",
+    "test:cheque-inward:posting": "playwright test tests/cheque-inward/cheque-inward-posting --headed",
+    "test:cheque-inward:return": "playwright test tests/cheque-inward/cheque-inward-return --headed",
+    "test:cheque-outward": "playwright test tests/cheque-outward --headed",
+    "test:cheque-outward:web": "playwright test tests/cheque-outward/cheque-outward-scan-web --headed",
+    "test:cheque-outward:lite": "playwright test tests/cheque-outward/cheque-outward-scan-lite --headed",
+    "test:cheque-outward:transmit": "playwright test tests/cheque-outward/cheque-outward-transmit --headed",
+    "test:return-inward": "playwright test tests/return-inward --headed",
+    "test:return-inward:cheque": "playwright test tests/return-inward/return-inward-cheque --headed",
+    "test:return-inward:neft": "playwright test tests/return-inward/return-inward-neft --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.9"
+  }
+}
